@@ -1,6 +1,6 @@
 # Roll Call
 
-Roll Call is an Ansible playbook which, together with multiple Ruby scripts, gathers and saves meta data relating to a WordPress users site specific accounts.
+Roll Call gathers and saves meta data relating to a WordPress users site specific accounts.
 
 ![Rollcall](rollcall.webp)
 
@@ -8,6 +8,15 @@ Roll Call is an Ansible playbook which, together with multiple Ruby scripts, gat
 
 Googles' [Go language](https://go.dev) installed to enable building executables from source code.
 
+Creation of a variables file with the following values as per your environment:
+
+```go
+var (
+servers = []string{/* list of servers to test against */}
+prodpack = []string{/* Server, Path, and User values for the WordPress Production environment */}
+testpack = []string{/* Server, Path, and User values for the WordPress Test environment */}
+)
+```
 ## Build
 
 From the root folder containing *main.go*, use the command that matches your environment:
